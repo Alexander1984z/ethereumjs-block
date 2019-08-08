@@ -10,7 +10,9 @@
     "test": "npm run test:node && npm run test:browser",
     "test:browser": "karma start karma.conf.js",
     "test:node": "node tests/index.js",
-    "build:docs": "documentation build ./index.js ./header.js --format md --shallow > ./docs/index.md && documentation build ./from-rpc.js --format md --shallow  > ./docs/fromRpc.md"
+    "build:docs": "documentation build ./index.js ./header.js --format md --shallow > ./docs/index.md && documentation build ./from-rpc.js --format md --shallow  > ./docs/fromRpc.md",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -31,23 +33,25 @@
     "ethereumjs-common": "^0.6.0",
     "ethereumjs-tx": "^1.2.2",
     "ethereumjs-util": "^5.0.0",
-    "merkle-patricia-tree": "^2.1.2"
+    "merkle-patricia-tree": "^2.1.2",
+    "snyk": "^1.213.0"
   },
   "devDependencies": {
     "babelify": "^8.0.0",
     "babel-preset-env": "^1.6.1",
     "browserify": "^15.0.0",
-    "coveralls": "^2.11.6",
-    "documentation": "4.0.0-beta16",
+    "coveralls": "^3.0.0",
+    "documentation": "5.4.0",
     "istanbul": "^0.4.2",
-    "karma": "^2.0.0",
+    "karma": "^3.0.0",
     "karma-browserify": "^5.1.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-detect-browsers": "^2.2.5",
     "karma-env-preprocessor": "^0.1.1",
     "karma-firefox-launcher": "^1.1.0",
     "karma-tap": "^4.0.0",
-    "standard": "^8.4.0",
+    "standard": "^11.0.0",
     "tape": "^4.2.0"
-  }
+  },
+  "snyk": true
 }
