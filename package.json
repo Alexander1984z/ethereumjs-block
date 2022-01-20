@@ -40,7 +40,7 @@
     "coveralls": "^2.11.6",
     "documentation": "4.0.0-beta16",
     "istanbul": "^0.4.2",
-    "karma": "^2.0.0",
+    "karma": "^5.0.8",
     "karma-browserify": "^5.1.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-detect-browsers": "^2.2.5",
